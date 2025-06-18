@@ -4,7 +4,6 @@ import SidebarList from "../components/SideBarList";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
 
-
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +14,6 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate()
-
 
   const handleLogin = async (e) => {
     e.preventDefault();

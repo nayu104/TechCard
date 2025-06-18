@@ -1,29 +1,31 @@
 .my-card-box-container {
   display: flex;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   box-sizing: border-box;
   color: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .sidebar {
+  width: 280px;
   background-color: #1e1e1e;
   padding: 1rem;
-  color: white;
   box-shadow: 2px 0 6px rgba(0,0,0,0.2);
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 .main-area {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
 }
 
 .page-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: #dddddd;
 } 
