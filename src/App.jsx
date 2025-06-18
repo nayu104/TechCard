@@ -38,13 +38,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LoginPage from './pages/LoginPage' // ページの場所に合わせてパス調整
 import MyCardBox from './pages/MyCardBox' 
+import CardEditing from './pages/CardEditing'
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/mycardbox" element={<MyCardBox />} /> 
+        <Route path="/mycardbox" element={<MyCardBox />} />
+        <Route path="/edit" element={<CardEditing/>} /> 
         {/* 他のページができたらここに追加していく */}
       </Routes>
     </Router>
