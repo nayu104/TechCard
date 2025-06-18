@@ -2,6 +2,7 @@ import React from 'react';
 import BusinessCard from '../components/BusinessCard';
 import SidebarList from '../components/SideBarList';
 import { cards } from '../data/mycard';
+import './MyBusinessCard.css';
 
 function MyBusinessCard() {
   const handleEditClick = () => {
@@ -9,87 +10,40 @@ function MyBusinessCard() {
   };
 
   return (
-    <div style={{
-      display: 'flex',
-      minHeight: '100vh',
-      backgroundColor: "#f0f0f0",
-      boxSizing: 'border-box',
-      color: "#000000",
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    }}>
-      
-      {/* 左サイドバー */}
-      <div style={{
-        width: '220px',
-        backgroundColor: '#1e1e1e',
-        padding: '1rem',
-        color: 'white',
-      }}>
+    <div className="my-business-card-container">
+      {/* サイドバー */}
+      <aside className="sidebar">
         <SidebarList />
+      </aside>
+
+      {/* 右側コンテンツ（ヘッダー＋メイン） */}
+      <div className="content-wrapper">
+        {/* ヘッダー */}
+        <header className="header">
+          <h1 className="header-title">
+            自分の名刺(プロフィール)
+          </h1>
+          <button
+            onClick={handleEditClick}
+            className="edit-button"
+          >
+            プロフィール編集
+          </button>
+        </header>
+
+        {/* メインエリア */}
+        <main className="main-content">
+          <section className="card-section">
+            <BusinessCard
+              name={cards[0].name}
+              github={cards[0].github}
+              skills={cards[0].skills}
+              avatar={cards[0].avatar}
+              message={cards[0].message}
+            />
+          </section>
+        </main>
       </div>
-
-      {/* メインエリア（グレー背景） */}
-      <main style={{
-        flex: 1,
-        backgroundColor: '#f0f0f0',  // グレー背景をここで指定
-        padding: '3rem 1rem 3rem 2rem', // 右余白1remに減らす、左は2rem
-        display: 'flex',
-        justifyContent: 'center',     // 横方向中央寄せ
-        alignItems: 'flex-start',
-      }}>
-
-        {/* 名刺カードのコンテナ */}
-        <section style={{
-          width: '100%',
-          maxWidth: '720px',      // 最大幅広げてカード大きく
-          backgroundColor: '#fff',
-          padding: '2.5rem',
-          borderRadius: '12px',
-          boxShadow: '0 6px 15px rgba(0,0,0,0.1)',
-        }}>
-
-          {/* ヘッダー */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            marginBottom: '2rem',
-          }}>
-            <h1 style={{
-              fontSize: '2.8rem',
-              margin: 0,
-              fontWeight: '700',
-              color: '#333',
-            }}>
-              自分の名刺(プロフィール)
-            </h1>
-            <button
-              onClick={handleEditClick}
-              style={{
-                padding: '0.6rem 1.4rem',
-                backgroundColor: '#007bff',
-                border: 'none',
-                borderRadius: '8px',
-                fontSize: '1rem',
-                color: 'white',
-                cursor: 'pointer',
-                boxShadow: '0 3px 8px rgba(0,123,255,0.5)',
-                transition: 'background-color 0.3s ease',
-              }}
-            >
-              プロフィール編集
-            </button>
-          </div>
-
-          {/* BusinessCard コンポーネント */}
-          <BusinessCard
-            name={cards[0].name}
-            github={cards[0].github}
-            skills={cards[0].skills}
-            avatar={cards[0].avatar}
-          />
-        </section>
-      </main>
     </div>
   );
 }
