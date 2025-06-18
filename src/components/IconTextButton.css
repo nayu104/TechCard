@@ -1,0 +1,19 @@
+.icon-text-button {
+  background-color: #404040;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.icon-text-button:hover {
+  background-color: #505050;
+  transform: translateY(-1px);
+} 

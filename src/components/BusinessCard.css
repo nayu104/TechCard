@@ -1,0 +1,66 @@
+.business-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #3b3b3b;
+  height: 280px;
+  width: 500px;
+  box-sizing: border-box;
+}
+
+.card-header {
+  display: flex;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.user-name {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.github-link {
+  max-width: 100%;
+  word-break: break-all;
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.github-icon {
+  width: 30px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.skills-container {
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  margin: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #888;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #000000;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.message-container {
+  font-style: italic;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+.message-label {
+  font-weight: bold;
+} 
