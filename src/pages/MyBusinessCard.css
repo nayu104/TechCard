@@ -41,21 +41,17 @@
 
 .edit-button {
   width: 30%;
-    padding: 0.75rem;
-    background: linear-gradient(135deg, #ff9900, #ff6600);
-    /* オレンジグラデーション */
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    /* ほんのり影 */
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #ff9900, #ff6600);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
-
 
 .main-content {
   flex: 1;
