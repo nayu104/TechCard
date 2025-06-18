@@ -1,0 +1,13 @@
+.sidebar-list {
+  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-title {
+  color: white;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+} 
