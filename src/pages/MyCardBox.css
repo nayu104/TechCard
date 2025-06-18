@@ -19,6 +19,11 @@
   padding: 2rem;
   overflow-y: auto;
   background-color: #fafafa;
+
+  display: flex;
+  flex-direction: column;/*縦に並べる*/
+  gap: 20px; /*カードの隙間の幅*/
+  align-items: center;
 }
 
 .page-title {
