@@ -38,7 +38,7 @@ function SidebarList() {
 <IconTextButton
   icon={FaSearch}
   label="友達検索"
-  onClick={() => console.log('Home clicked')}//画面遷移のパスを書いてください
+   onClick={() => navigate('/friendsearch')}//画面遷移のパスを書いてください
 />
 
 <IconTextButton

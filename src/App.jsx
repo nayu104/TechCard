@@ -38,14 +38,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LoginPage from './pages/LoginPage' // ページの場所に合わせてパス調整
 import MyCardBox from './MyCardBox' 
+import FriendSearch from './FriendSearch'
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/mycardbox" element={<MyCardBox />} /> 
+        <Route path="/mycardbox" element={<MyCardBox />} />
         {/* 他のページができたらここに追加していく */}
+        <Route path="/friendsearch" element={<FriendSearch />} />
       </Routes>
     </Router>
   )
