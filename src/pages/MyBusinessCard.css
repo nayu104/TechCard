@@ -10,7 +10,6 @@
 .sidebar {
   width: 280px;
   background-color: #1e1e1e;
-  color: white;
   padding: 1rem;
   height: 100vh;
   box-sizing: border-box;
@@ -20,12 +19,12 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
 }
 
 .header {
   width: 90%;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 1.5rem 2rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   display: flex;
@@ -37,26 +36,26 @@
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
-  color: #333;
+  color: #dddddd;
 }
 
 .edit-button {
-  padding: 0.6rem 0.6rem;
-  background-color: #007bff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 3px 8px rgba(0,123,255,0.5);
-  transition: all 0.3s ease;
+  width: 30%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #ff9900, #ff6600);
+    /* オレンジグラデーション */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* ほんのり影 */
 }
 
-.edit-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(0,123,255,0.6);
-}
+
 
 .main-content {
   flex: 1;
@@ -69,7 +68,6 @@
 .card-section {
   width: 100%;
   max-width: 1000px;
-  background-color: #fff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
