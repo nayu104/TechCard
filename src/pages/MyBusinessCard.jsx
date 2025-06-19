@@ -19,8 +19,8 @@ function MyBusinessCard() {
 
   const handleSave = () => {
     // 技術スタックは最大4つまで
-    if (form.skills.length > 4) {
-      setForm(f => ({ ...f, skills: f.skills.slice(0, 4) }));
+    if (form.skills.length > 5) {
+      setForm(f => ({ ...f, skills: f.skills.slice(0, 5) }));
     }
     setModalOpen(false);
   };
