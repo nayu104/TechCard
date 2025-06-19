@@ -26,10 +26,10 @@ const ProfileEditModal = ({ isOpen, onClose, onSave, form, setForm }) => {
       const skills = prev.skills || [];
       if (skills.includes(skill)) {
         return { ...prev, skills: skills.filter(s => s !== skill) };
-      } else if (skills.length < 4) {
+      } else if (skills.length < 5) {
         return { ...prev, skills: [...skills, skill] };
       } else {
-        return prev; // 最大4つ
+        return prev; // 最大6つ
       }
     });
   };
@@ -77,10 +77,10 @@ const ProfileEditModal = ({ isOpen, onClose, onSave, form, setForm }) => {
             <label>GitHubアカウント
               <input name="github" value={form.github} onChange={handleChange} maxLength={100} placeholder="https://github.com/yourname" />
             </label>
-            <label>ひとことメッセージ
-              <textarea name="message" value={form.message} onChange={handleChange} maxLength={160} />
+            <label>ひとことメッセージ (50文字以内)
+              <textarea name="message" value={form.message} onChange={handleChange} maxLength={50} />
             </label>
-            <label>技術スタック（最大4つ）
+            <label>技術スタック（最大5つ）
               <input
                 type="text"
                 className="skill-search-box"
@@ -96,7 +96,7 @@ const ProfileEditModal = ({ isOpen, onClose, onSave, form, setForm }) => {
                       type="checkbox"
                       checked={form.skills && form.skills.includes(skill)}
                       onChange={() => handleSkillChange(skill)}
-                      disabled={form.skills && form.skills.length >= 4 && !(form.skills.includes(skill))}
+                      disabled={form.skills && form.skills.length >= 5 && !(form.skills.includes(skill))}
                     />
                     {skill}
                   </label>
