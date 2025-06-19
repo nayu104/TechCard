@@ -8,7 +8,7 @@ body {
   overflow: hidden; /* ← これが超重要！余分なスクロールバーを消す */
   /* 黒ベース */
   background-color: #000000;
-background-image: url("data:image/svg+xml;utf8,\
+  background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'>\
   <defs>\
     <linearGradient id='grad1' x1='50%' y1='0%' x2='0%' y2='40%'>\
@@ -23,53 +23,37 @@ background-image: url("data:image/svg+xml;utf8,\
   <line x1='50%' y1='0' x2='0' y2='40%' stroke='url(%23grad1)' stroke-width='5' />\
   <line x1='100%' y1='30%' x2='30%' y2='100%' stroke='url(%23grad2)' stroke-width='5' />\
 </svg>");
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .login-appname-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* ← これが縦並び */
     justify-content: center;
-    /* 縦方向中央 */
     align-items: center;
-    /* 横方向中央 */
     justify-content: flex-start;
-    /* ← 上寄せに変更 */
     padding-top: 3rem;
-    /* ← 上からの距離を調整 */
 }
 
 .app-name-tag {
     text-align: center;
     color: white;
-
-}
-
-/* 中央寄せ用のラッパー */
-body {
-    display: flex;
-    justify-content: center;
-    /* 横中央 */
-    align-items: center;
-    /* 縦中央 */
 }
 
 /* ログインフォーム自体のスタイル */
 .login-container {
-    background-color: #2c2c2c;
+    background-color: #222;
     color: white;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 48px 40px;
     width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    max-width: 420px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 2;
 }
 
 .login-container h2 {

@@ -4,13 +4,22 @@
   padding: 1rem;
   background-color: #3b3b3b;
   height: 280px;
-  width: 500px;
+  width: 600px;
   box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .business-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.2rem 0.5rem;
+  }
 }
 
 .card-header {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .avatar {
@@ -18,6 +27,7 @@
   height: 80px;
   border-radius: 50%;
   margin-bottom: 0.5rem;
+  object-fit: cover;
 }
 
 .user-name {
