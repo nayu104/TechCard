@@ -4,10 +4,10 @@ import { FaUserCircle } from 'react-icons/fa'
 import { FaSearch } from 'react-icons/fa'
 import { FaFolderOpen } from 'react-icons/fa'
 
-	import { MdContactPage } from 'react-icons/md'
-	import { FaCheckCircle } from 'react-icons/fa'
+import { MdContactPage } from 'react-icons/md'
+import { FaCheckCircle } from 'react-icons/fa'
 
-  import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './SideBarList.css';
 
 
@@ -38,7 +38,7 @@ function SidebarList() {
 
     <IconTextButton
       icon={FaCheckCircle}
-      label="ログイン画面テスト"
+      label="ログアウト"
       onClick={() => navigate('/')}//画面遷移のパスを書いてください
     />
 
