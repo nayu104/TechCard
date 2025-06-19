@@ -1,0 +1,87 @@
+/* 親要素のbodyかhtmlに高さ100%を指定しておく */
+html,
+body {
+  height: 100%;
+  /* 背景指定はindex.cssで共通化 */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-appname-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3rem;
+}
+
+.app-name-tag {
+    text-align: center;
+    color: white;
+}
+
+/* ログインフォーム自体のスタイル */
+.login-container {
+    background-color: #222;
+    color: white;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.login-container input::placeholder {
+    color: #bbbbbb;
+}
+
+.login-container button {
+    width: 70%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #ff9900, #ff6600);
+    /* オレンジグラデーション */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* ほんのり影 */
+}
+
+.login-container button:hover {
+    /* background-color: black;
+    color: white; */
+  background: linear-gradient(135deg, #ff7f50, #e65c00); /* ホバー時少し濃く */
+  transform: scale(1.03); /* ちょっと浮き上がる感 */
+}
+
+.button-container {
+    text-align: center;
+}
+
+.login-container p {
+    color: red;
+    text-align: center;
+    margin-top: 1rem;
+}
