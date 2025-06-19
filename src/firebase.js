@@ -3,14 +3,14 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBYql0Vh1uFGUKfViIqnzmJp5nphrPQKGQ",
-  authDomain: "electronicbusinesscard-f3372.firebaseapp.com",
-  projectId: "electronicbusinesscard-f3372",
-  stojectId: "electronicbusinesscard-f3372",
-  storageBucket: "electronicbusinesscard-f3372.appspot.com",
-  messagingSenderId: "746502358122",
-  appId:"1:746502358122:web:3a282ad08445165cd2f613",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
+
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

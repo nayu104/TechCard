@@ -1,17 +1,9 @@
 import BusinessCard from './BusinessCard';
-import { cards } from '../data/cards';
+import './BusinessCardList.css';
 
-function BusinessCardList() {
+function BusinessCardList({ cards }) {
   return (
-   <div style={{
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-  gap: '1rem',
-  padding: '1rem',
-  width: '100vw',     // 画面幅100%
-  boxSizing: 'border-box'
-}}>
-
+    <div className="business-card-list">
       {cards.map((card, index) => (
         <BusinessCard key={index} {...card} />
       ))}
@@ -20,3 +12,18 @@ function BusinessCardList() {
 }
 
 export default BusinessCardList;
+
+
+/*
+function BusinessCardList({ cards }) {
+  return (
+    <div className="card-list">
+      {cards.map(card => (
+        <BusinessCard key={card.id} card={card} />
+      ))}
+    </div>
+  );
+}
+
+export default BusinessCardList;
+*/

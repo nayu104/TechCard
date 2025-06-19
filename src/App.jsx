@@ -36,15 +36,17 @@
 
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import LoginPage from './pages/LoginPage' // ページの場所に合わせてパス調整
-import MyCardBox from './pages/MyCardBox' 
+import LoginPage from './pages/LoginPage'
+import MyCardBox from './pages/MyCardBox'
+import MyBusinessCard from './pages/MyBusinessCard'
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/mycardbox" element={<MyCardBox />} /> 
+        <Route path="/mycardbox" element={<MyCardBox />} />
+        <Route path="/mybusinesscard" element={<MyBusinessCard />} /> 
         {/* 他のページができたらここに追加していく */}
       </Routes>
     </Router>
