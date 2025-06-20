@@ -96,7 +96,7 @@ function MyBusinessCard() {
         {/* UID表示＋コピー */}
         {user && (
           <div className="uid-row">
-            <span className="uid-label">あなたのUID:</span>
+            <span className="uid-label">あなたのID:</span>
             <span className="uid-value">{user.uid}</span>
             <button
               className="uid-copy-btn"
@@ -133,7 +133,7 @@ function MyBusinessCard() {
         setForm={setForm}
       />
       {copyToast && (
-        <div className="uid-toast">UIDをコピーしました</div>
+        <div className="uid-toast">IDをコピーしました</div>
       )}
     </div>
   );

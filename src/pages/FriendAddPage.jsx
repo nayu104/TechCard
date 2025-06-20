@@ -40,7 +40,7 @@ const FriendAddPage = () => {
       const friendRef = doc(db, "users", uidInput);
       const friendSnap = await getDoc(friendRef);
       if (!friendSnap.exists()) {
-        setSearchError("そのUIDのユーザーは存在しません");
+        setSearchError("そのIDのユーザーは存在しません");
         return;
       }
       setSearchResult({ ...friendSnap.data() });
@@ -78,13 +78,13 @@ const FriendAddPage = () => {
         <SidebarList />
       </div>
       <div className="main-area" style={{color:'#fff', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-start'}}>
-        <h2 className="page-title">UIDで友達検索・追加</h2>
+        <h2 className="page-title">IDで友達検索・追加</h2>
         <form onSubmit={handleSearch} className="input-group">
           <input
             type="text"
             value={uidInput}
             onChange={e => setUidInput(e.target.value)}
-            placeholder="友達のUIDを入力"
+            placeholder="友達のIDを入力"
             required
           />
           <button type="submit" className="button-orange">検索</button>
