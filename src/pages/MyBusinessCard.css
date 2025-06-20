@@ -13,12 +13,14 @@
   padding: 1rem;
   height: 100vh;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .content-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 0;
   /* background-color: #f0f0f0; */
 }
 
@@ -40,17 +42,23 @@
 }
 
 .edit-button {
-  width: 30%;
-  padding: 0.75rem;
+  width: auto;
+  padding: 0.7rem 1.5rem;
   background: linear-gradient(135deg, #ff9900, #ff6600);
-  color: rgb(255, 255, 255);
-  border: none;
+  color: #181818;
+  border: 2px solid #ff9900;
   border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.2s, color 0.2s, border 0.2s;
   font-size: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button:hover {
+  background: #181818;
+  color: #ff9900;
+  border: 2px solid #ff9900;
 }
 
 .main-content {
@@ -63,8 +71,89 @@
 
 .card-section {
   width: 100%;
-  max-width: 1000px;
+  max-width: 700px;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  margin: 2.5rem auto 0 auto;
+}
+
+/* UID表示＋コピー */
+.uid-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin: 0 2.5rem 1.5rem 2.5rem;
+  font-size: 1.05rem;
+  color: #ff9900;
+  background: #232323;
+  border-radius: 8px;
+  padding: 0.5em 1.2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  width: 100%;
+  max-width: 700px;
+  overflow-wrap: anywhere;
+  box-sizing: border-box;
+}
+.uid-label {
+  font-weight: bold;
+  margin-right: 0.3em;
+  color: #ff9900;
+}
+.uid-value {
+  font-family: 'Consolas', 'Menlo', monospace;
+  color: #ff9900;
+  background: #181818;
+  padding: 0.2em 0.7em;
+  border-radius: 6px;
+  font-size: 1.02em;
+  letter-spacing: 0.02em;
+  word-break: break-all;
+}
+.uid-copy-btn {
+  background: linear-gradient(135deg, #ff9900, #ff6600);
+  color: #181818;
+  border: 2px solid #ff9900;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.98rem;
+  padding: 0.3em 1.1em;
+  margin-left: auto;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+}
+.uid-copy-btn:hover {
+  background: #181818;
+  color: #ff9900;
+  border: 2px solid #ff9900;
+}
+
+/* コピー完了トースト */
+.uid-toast {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  background: linear-gradient(135deg, #ff9900, #ff6600);
+  color: #181818;
+  padding: 0.9em 2.2em;
+  border-radius: 2em;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  z-index: 2000;
+  animation: fadeinout 1.8s;
+}
+@keyframes fadeinout {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
 } 

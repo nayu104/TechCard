@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import IconTextButton from './IconTextButton'
 
 import { FaUserCircle } from 'react-icons/fa'
@@ -9,14 +10,36 @@ import { FaCheckCircle } from 'react-icons/fa'
 
 import { useNavigate } from 'react-router-dom';
 import './SideBarList.css';
+import icon from '../assets/Icon.png';
 
 
 function SidebarList() {
-  
+  const [isRotating, setIsRotating] = useState(false);
   const navigate = useNavigate(); 
+
+  const handleIconClick = () => {
+    setIsRotating(false);
+    setTimeout(() => {
+      setIsRotating(true);
+    }, 0);
+  };
+  const handleAnimationEnd = () => {
+    setIsRotating(false);
+  };
+
   return (
     <div className="sidebar-list">
-      <h2 className="sidebar-title">電子名刺メニュー</h2>
+      <h2 className="sidebar-title">
+        <span
+          className={`icon-rotate${isRotating ? ' rotating' : ''}`}
+          onClick={handleIconClick}
+          onAnimationEnd={handleAnimationEnd}
+          style={{ display: 'inline-block', cursor: 'pointer' }}
+        >
+          <img src={icon} alt="App Icon" style={{ width: '2.5em', height: '2.0em', marginLeft: '1.5em', verticalAlign: 'middle', borderRadius: '20%' }} />
+        </span>
+        TechCard
+      </h2>
 
       <IconTextButton
       icon={FaUserCircle}
@@ -33,7 +56,7 @@ function SidebarList() {
     <IconTextButton
       icon={FaSearch}
       label="友達検索"
-      onClick={() => console.log('Home clicked')}//画面遷移のパスを書いてください.
+      onClick={() => navigate('/friendadd')}
     />
 
     <IconTextButton

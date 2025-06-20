@@ -1,9 +1,11 @@
 .business-card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr); /* 2枚横並びに固定 */
+  gap: 1.5rem;
+  padding: 2rem;
   width: 100%;
   box-sizing: border-box;
   justify-items: center;
+  max-height: 100%; /* 親要素の高さに合わせる */
+  overflow-y: auto; /* 縦スクロール可能に */
 } 

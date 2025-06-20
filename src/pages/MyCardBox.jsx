@@ -1,24 +1,75 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BusinessCardList from '../components/BusinessCardList';
 import SidebarList from '../components/SideBarList';
-import { cards } from '../data/cards'; 
+import { auth, db } from '../firebase';
+import { doc, getDoc, updateDoc, arrayRemove } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
 import './MyCardBox.css';
 
 function MyCardBox() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [user, setUser] = useState(null);
+  const [friendCards, setFriendCards] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // スキルや名前で検索して該当する名刺をフィルタリング
-  const filteredCards = cards.filter(card => {
+  // 認証状態を監視
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (u) => {
+      setUser(u);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  // フレンドの名刺情報を取得
+  useEffect(() => {
+    const fetchFriends = async () => {
+      setLoading(true);
+      if (!user) {
+        setFriendCards([]);
+        setLoading(false);
+        return;
+      }
+      try {
+        const myRef = doc(db, 'users', user.uid);
+        const mySnap = await getDoc(myRef);
+        const myData = mySnap.data();
+        const friendIds = myData.friend_ids || [];
+        const friendDocs = await Promise.all(
+          friendIds.map(fid => getDoc(doc(db, 'users', fid)))
+        );
+        const cards = friendDocs.filter(snap => snap.exists()).map(snap => snap.data());
+        setFriendCards(cards);
+      } catch (err) {
+        setFriendCards([]);
+      }
+      setLoading(false);
+    };
+    if (user) fetchFriends();
+  }, [user]);
+
+  // フレンド削除
+  const deleteFriend = async (uidToDelete) => {
+    if (!user) return;
+    try {
+      const myRef = doc(db, 'users', user.uid);
+      await updateDoc(myRef, {
+        friend_ids: arrayRemove(uidToDelete)
+      });
+      // 即時反映のため再取得
+      setFriendCards(prev => prev.filter(card => card.uid !== uidToDelete));
+    } catch (err) {
+      alert('削除に失敗しました: ' + err.message);
+    }
+  };
+
+  // 検索フィルタ
+  const filteredCards = friendCards.filter(card => {
     const lowerSearch = searchTerm.toLowerCase().trim();
     const nameMatch = card.name.toLowerCase().includes(lowerSearch);
     const skillMatch = card.skills.some(skill =>
       skill.toLowerCase().includes(lowerSearch)
     );
-    const companyMatch = card.company ? 
-      card.company.toLowerCase().includes(lowerSearch) : false;
-    const positionMatch = card.position ? 
-      card.position.toLowerCase().includes(lowerSearch) : false;
-    return nameMatch || skillMatch || companyMatch || positionMatch;
+    return nameMatch || skillMatch;
   });
 
   return (
@@ -29,24 +80,13 @@ function MyCardBox() {
       </div>
       {/* メインエリア */}
       <div className="main-area">
-        <h1 className="page-title">
-          名刺入れ
-        </h1>
-        {/* 検索欄 */}
-        <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
+        <h1 className="page-title">名刺入れ</h1>
+        <div className="input-group">
           <input
             type="text"
-            placeholder="名前、スキル、会社名、役職で検索"
+            placeholder="名前、スキルで検索"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{
-              padding: '10px 15px',
-              fontSize: '1rem',
-              width: '60%',
-              maxWidth: '500px',
-              borderRadius: '5px',
-              border: '1px solid #ccc',
-            }}
           />
         </div>
         {/* 検索結果の表示 */}
@@ -56,17 +96,21 @@ function MyCardBox() {
           </div>
         )}
         {/* 名刺リスト or メッセージ */}
-        {filteredCards.length > 0 ? (
-          <BusinessCardList cards={filteredCards} />
-        ) : (
-          <div style={{ textAlign: 'center', color: '#888', marginTop: '2rem' }}>
-            {searchTerm ? (
-              <p>「{searchTerm}」に該当する名刺が見つかりませんでした。</p>
-            ) : (
-              <p>名刺が登録されていません。</p>
-            )}
-          </div>
-        )}
+        <div style={{flex: 1, overflowY: 'auto', minHeight: 0}}>
+          {loading ? (
+            <div style={{ textAlign: 'center', color: '#888', marginTop: '2rem' }}>読み込み中...</div>
+          ) : filteredCards.length > 0 ? (
+            <BusinessCardList cards={filteredCards} deleteFriend={deleteFriend} />
+          ) : (
+            <div style={{ textAlign: 'center', color: '#888', marginTop: '2rem' }}>
+              {searchTerm ? (
+                <p>「{searchTerm}」に該当する名刺が見つかりませんでした。</p>
+              ) : (
+                <p>友達が登録されていません。</p>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

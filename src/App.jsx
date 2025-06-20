@@ -39,6 +39,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import MyCardBox from './pages/MyCardBox'
 import MyBusinessCard from './pages/MyBusinessCard'
+import FriendAddPage from './pages/FriendAddPage'
 
 function App() {
   return (
@@ -46,7 +47,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/mycardbox" element={<MyCardBox />} />
-        <Route path="/mybusinesscard" element={<MyBusinessCard />} /> 
+        <Route path="/mybusinesscard" element={<MyBusinessCard />} />
+        <Route path="/friendadd" element={<FriendAddPage />} />
         {/* 他のページができたらここに追加していく */}
       </Routes>
     </Router>

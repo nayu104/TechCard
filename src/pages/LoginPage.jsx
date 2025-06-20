@@ -8,11 +8,14 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
+import icon from '../assets/Icon.png';
+import { MdEmail } from 'react-icons/md';
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isAnimating, setIsAnimating] = useState(false); // アニメーション用state
   const navigate = useNavigate()
 
   const handleLogin = async (e) => {
@@ -38,18 +41,23 @@ const LoginPage = () => {
         friend_ids: []
       });
     }
-
-      alert("ログイン成功！");
-      navigate("/mycardbox") //ここで遷移
+      setIsAnimating(true); // アニメーション開始
+      setTimeout(() => {
+        navigate("/mybusinesscard"); // アニメーション後に遷移
+      }, 700); // アニメーション時間と合わせる
     } catch (err) {
       setError("ログインに失敗しました: " + err.message);
     }
   };
 
   return (
-    <div className="login-appname-container">
+    <div className={`login-appname-container${isAnimating ? ' login-animate-out' : ''}`}>
+      <div className="logo-split-container">
+        <img src={icon} alt="App Icon Left" className={`logo-split left${isAnimating ? ' animate-left' : ''}`} />
+        <img src={icon} alt="App Icon Right" className={`logo-split right${isAnimating ? ' animate-right' : ''}`} />
+      </div>
       <div className="app-name-tag">
-        <h1>ElectronicBisinessCard</h1>
+        <h1>TechCard</h1>
       </div>
       <div className="login-container">
         {/* <h2>

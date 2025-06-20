@@ -18,8 +18,11 @@
 
 .main-area {
   flex: 1;
+  height: auto;
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
-  overflow-y: auto;
+  /* overflow: hidden; 削除 */
   /* background-color: #fafafa; */
 }
 

@@ -45,32 +45,43 @@
 }
 
 .close-btn {
-  background: none;
-  border: none;
+  background: transparent;
+  border: 2px solid #fff;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.3rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   cursor: pointer;
   margin-right: 1rem;
-  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 0;
 }
 .close-btn:hover {
-  color: #ff6600;
+  background: linear-gradient(135deg, #ff9900, #ff6600);
+  color: #181818;
+  border: 2px solid #ff9900;
 }
 
 .save-btn {
-  background: #fff;
+  background: linear-gradient(135deg, #ff9900, #ff6600);
   color: #181818;
-  border: none;
+  border: 2px solid #ff9900;
   border-radius: 999px;
   font-weight: bold;
   font-size: 1rem;
   padding: 0.4rem 1.2rem;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, border 0.2s;
 }
 .save-btn:hover {
-  background: #ff9900;
-  color: #fff;
+  background: #181818;
+  color: #ff9900;
+  border: 2px solid #ff9900;
 }
 
 .profile-edit-body {

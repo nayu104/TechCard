@@ -34,22 +34,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 3rem;
+    padding-bottom: 10rem;
 }
 
 .app-name-tag {
     text-align: center;
-    color: white;
+    color: #ff9900;
 }
 
 /* ログインフォーム自体のスタイル */
 .login-container {
     background-color: #222;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 48px 40px;
     width: 100%;
-    max-width: 420px;
+    max-width: 600px;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.4);
     position: relative;
@@ -68,7 +67,7 @@ body {
     border: none;
     border-radius: 5px;
     background-color: #3a3a3a;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .login-container input::placeholder {
@@ -80,7 +79,7 @@ body {
     padding: 0.75rem;
     background: linear-gradient(135deg, #ff9900, #ff6600);
     /* オレンジグラデーション */
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 30px;
     font-weight: bold;
@@ -106,4 +105,47 @@ body {
     color: red;
     text-align: center;
     margin-top: 1rem;
+}
+
+.login-animate-out {
+  animation: loginFadeZoom 0.7s cubic-bezier(0.4,1.4,0.7,1) forwards;
+}
+
+@keyframes loginFadeZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 0.5;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+}
+
+.logo-split-container {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem auto;
+}
+.logo-split {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.4,1.4,0.7,1);
+  border-radius: 20%;
+  z-index: 2;
+}
+.logo-split.left.animate-left {
+  transform: translateX(-60px);
+}
+.logo-split.right.animate-right {
+  transform: translateX(60px);
 }
