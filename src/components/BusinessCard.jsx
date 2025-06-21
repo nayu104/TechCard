@@ -1,6 +1,9 @@
+import React from 'react';
 import { skillIcons } from '../data/skillIcons';
 import QRCodeComponent from './QRCode';
 import './BusinessCard.css';
+import defaultAvatar from '../assets/kkrn_icon_user_11.png';
+import githubIcon from '../assets/GitHub_Invertocat_Light.png';
 
 function BusinessCard({name, github, skills, avatar, message, uid, showQRCode}) {
   // QRコードに含める名刺情報をJSON形式で作成
@@ -28,7 +31,7 @@ function BusinessCard({name, github, skills, avatar, message, uid, showQRCode}) 
         {/* <img src={avatar} alt={name} className="avatar" /> */}
         {/* 6/21 アイコンを設定していない場合はデフォルトアイコンを使用 */ }
         <img 
-          src={avatar || '/src/assets/kkrn_icon_user_11.png'} 
+          src={avatar || defaultAvatar} 
           alt={name} 
           className="avatar" 
         />
@@ -40,7 +43,7 @@ function BusinessCard({name, github, skills, avatar, message, uid, showQRCode}) 
       {github ? (
         <a href={github} target="_blank" className='github-link'>
           <img
-            src="src\assets\GitHub_Invertocat_Light.png"
+            src={githubIcon}
             alt="GitHub Icon"
             className="github-icon"
           />
@@ -49,7 +52,7 @@ function BusinessCard({name, github, skills, avatar, message, uid, showQRCode}) 
       ) : (
         <div className='github-link'>
           <img
-            src="src\assets\GitHub_Invertocat_Light.png"
+            src={githubIcon}
             alt="GitHub Icon"
             className="github-icon"
           />  
