@@ -40,11 +40,6 @@
   padding-right: 90px; /* QRコードのスペースを確保 */
 }
 
-/* QRコードが非表示の場合のスタイル */
-.card-header.no-qr-padding {
-  padding-right: 0;
-}
-
 .avatar {
   width: 80px;
   height: 80px;
@@ -71,6 +66,7 @@
   height: 25px;
   vertical-align: middle;
   margin-right: 0.5rem;
+  object-fit: contain; /* 6/21 アイコンの画像の比率を保持*/
 }
 
 .skills-container {
