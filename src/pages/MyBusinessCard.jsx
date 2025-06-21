@@ -121,6 +121,7 @@ function MyBusinessCard() {
                 avatar={form.avatar}
                 message={form.message}
                 uid={user?.uid}
+                showQRCode={true}
               />
             )}
           </section>
