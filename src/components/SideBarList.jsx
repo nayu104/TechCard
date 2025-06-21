@@ -43,7 +43,7 @@ function SidebarList() {
 
       <IconTextButton
       icon={FaUserCircle}
-      label="プロフィール"
+      label="My名刺"
       onClick={() => navigate('/mybusinesscard')}
     />
 
@@ -55,7 +55,7 @@ function SidebarList() {
 
     <IconTextButton
       icon={FaSearch}
-      label="友達検索"
+      label="名刺検索" //6/21 ここを友達検索から名刺検索に追加　
       onClick={() => navigate('/friendadd')}
     />
 

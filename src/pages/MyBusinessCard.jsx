@@ -87,10 +87,10 @@ function MyBusinessCard() {
         {/* ヘッダー */}
         <header className="header">
           <h1 className="header-title">
-            自分の名刺(プロフィール)
+            My名刺
           </h1>
           <button onClick={() => setModalOpen(true)} className="edit-button">
-            プロフィール編集
+            名刺を編集
           </button>
         </header>
         {/* UID表示＋コピー */}
