@@ -49,7 +49,7 @@ const FriendAddPage = () => {
     }
   };
 
-  // 友達追加
+  // 名刺追加
   const handleAddFriend = async () => {
     setAdding(true);
     setMessage("");
@@ -65,7 +65,7 @@ const FriendAddPage = () => {
       await updateDoc(myRef, {
         friend_ids: arrayUnion(uidInput)
       });
-      setMessage("友達を追加しました！");
+      setMessage("名刺を追加しました！"); //友達を追加しましたから名刺を追加しましたに変更
     } catch (err) {
       setMessage("エラー: " + err.message);
     }
@@ -78,13 +78,14 @@ const FriendAddPage = () => {
         <SidebarList />
       </div>
       <div className="main-area" style={{color:'#fff', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-start'}}>
-        <h2 className="page-title">IDで友達検索・追加</h2>
+        <h2 className="page-title">IDで名刺の検索・追加</h2> 
+        {/* //6/21 ここを友達から名刺に変更 */}
         <form onSubmit={handleSearch} className="input-group">
           <input
             type="text"
             value={uidInput}
             onChange={e => setUidInput(e.target.value)}
-            placeholder="友達のIDを入力"
+            placeholder="名刺IDを入力"
             required
           />
           <button type="submit" className="button-orange">検索</button>

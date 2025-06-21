@@ -106,7 +106,7 @@ function MyCardBox() {
               {searchTerm ? (
                 <p>「{searchTerm}」に該当する名刺が見つかりませんでした。</p>
               ) : (
-                <p>友達が登録されていません。</p>
+                <p>名刺が登録されていません。</p>
               )}
             </div>
           )}

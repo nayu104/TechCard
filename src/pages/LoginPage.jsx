@@ -50,6 +50,10 @@ const LoginPage = () => {
     }
   };
 
+  const handleRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <div className={`login-appname-container${isAnimating ? ' login-animate-out' : ''}`}>
       <div className="logo-split-container">
@@ -82,6 +86,13 @@ const LoginPage = () => {
             <button type="submit">Login</button>
           </div>
         </form>
+
+          {/* まだアカウントがない場合の新規ユーザー登録ボタン */}
+        <div className="button-container" style={{ marginTop: '10px' }}>
+          <button type="button" onClick={handleRegister} style={{ backgroundColor: '#4CAF50' }}>
+            アカウントを作成
+          </button>
+        </div>
 
         
         {error && <p>{error}</p>}

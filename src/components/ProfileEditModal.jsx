@@ -43,7 +43,7 @@ const ProfileEditModal = ({ isOpen, onClose, onSave, form, setForm }) => {
       <div className="profile-edit-modal">
         <div className="profile-edit-header">
           <button className="close-btn" onClick={onClose}>&times;</button>
-          <span className="profile-edit-title">プロフィールを編集</span>
+          <span className="profile-edit-title">名刺を編集</span>
           <button className="save-btn" onClick={onSave}>保存</button>
         </div>
         <div className="profile-edit-body">

@@ -36,7 +36,7 @@ const FriendListPage = () => {
 
   return (
     <div style={{maxWidth: 600, margin: "2rem auto"}}>
-      <h2>友達一覧</h2>
+      <h2>名刺一覧</h2>
       {loading && <p>読み込み中...</p>}
       {error && <p style={{color: "red"}}>{error}</p>}
       <ul>
@@ -50,7 +50,7 @@ const FriendListPage = () => {
           </li>
         ))}
       </ul>
-      {(!loading && friends.length === 0) && <p>友達がいません。</p>}
+      {(!loading && friends.length === 0) && <p>名刺がありません。</p>}
     </div>
   );
 };
