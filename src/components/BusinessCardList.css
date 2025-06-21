@@ -1,12 +1,25 @@
 .business-card-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2枚横並びに固定 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* レスポンシブグリッド */
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
   box-sizing: border-box;
   justify-items: center;
-  height: fit-content; /* コンテンツに合わせて高さを調整 */
-  max-height: none; /* 最大高さ制限を解除 */
-  overflow: visible; /* オーバーフローを表示 */
+  min-height: fit-content;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .business-card-list {
+    grid-template-columns: 1fr; /* モバイルでは1列 */
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .business-card-list {
+    grid-template-columns: repeat(2, 1fr); /* 大画面では2列固定 */
+  }
 } 

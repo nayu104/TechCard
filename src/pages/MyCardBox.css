@@ -1,7 +1,7 @@
 .my-card-box-container {
   display: flex;
   min-height: 100vh;
-  height: auto; /* 高さを自動に設定 */
+  height: 100vh; /* 高さを100vhに固定 */
   /* background-color: #f0f0f0; */
   box-sizing: border-box;
   color: #000000;
@@ -22,13 +22,12 @@
 
 .main-area {
   flex: 1;
-  height: auto;
+  height: 100vh; /* 高さを100vhに固定 */
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  overflow: visible; /* オーバーフローを表示 */
-  min-height: 0; /* 最小高さを0に設定 */
-  /* background-color: #fafafa; */
+  overflow: hidden; /* メインエリアのオーバーフローを隠す */
+  box-sizing: border-box;
 }
 
 .page-title {
@@ -36,6 +35,54 @@
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #ffffff; /* 白に変更 */
+  flex-shrink: 0; /* タイトルを固定 */
+}
+
+.input-group {
+  flex-shrink: 0; /* 検索ボックスを固定 */
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* 検索結果表示エリア */
+.search-results {
+  flex-shrink: 0; /* 検索結果表示を固定 */
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #666;
+}
+
+/* 名刺リストコンテナ */
+.cards-container {
+  flex: 1;
+  overflow-y: auto; /* 縦方向のスクロールを有効化 */
+  overflow-x: hidden; /* 横方向のスクロールを無効化 */
+  padding-right: 0.5rem; /* スクロールバーのスペース */
+}
+
+/* スクロールバーのスタイル */
+.cards-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cards-container::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background: #ff9900;
+  border-radius: 4px;
+}
+
+.cards-container::-webkit-scrollbar-thumb:hover {
+  background: #ff6600;
 }
 
 /* 削除成功トースト */
