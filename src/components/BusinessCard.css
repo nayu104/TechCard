@@ -66,6 +66,7 @@
   height: 25px;
   vertical-align: middle;
   margin-right: 0.5rem;
+  object-fit: contain; /* 6/21 アイコンの画像の比率を保持*/
 }
 
 .skills-container {

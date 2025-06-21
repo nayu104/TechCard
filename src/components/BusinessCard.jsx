@@ -22,19 +22,46 @@ function BusinessCard({name, github, skills, avatar, message, uid}) {
       </div>
       
       <div className="card-header">
-        <img src={avatar} alt={name} className="avatar" />
+        {/* <img src={avatar} alt={name} className="avatar" /> */}
+        {/* 6/21 アイコンを設定していない場合はデフォルトアイコンを使用 */ }
+        <img 
+          src={avatar || '/src/assets/kkrn_icon_user_11.png'} 
+          alt={name} 
+          className="avatar" 
+        />
         <h3 className="user-name">{name}</h3>
       </div>
 
       {/* GitHubリンクを表示 */}
-      <a href={github} target="_blank" className="github-link">
+      {/* 6/21 分岐を用いてgithubリンクが未入力の場合に対応 */}
+      {github ? (
+        <a href={github} target="_blank" className='github-link'>
+          <img
+            src="src\assets\GitHub_Invertocat_Light.png"
+            alt="GitHub Icon"
+            className="github-icon"
+          />
+          Github
+        </a>
+      ) : (
+        <div className='github-link'>
+          <img
+            src="src\assets\GitHub_Invertocat_Light.png"
+            alt="GitHub Icon"
+            className="github-icon"
+          />  
+          <span style={{color: 'white', textDecoration: 'none'}}>未入力</span>
+        </div>
+      )}
+
+      {/* <a href={github} target="_blank" className="github-link">
         <img 
           src="src\assets\GitHub_Invertocat_Light.png"
           alt="GitHub Icon"
           className="github-icon"
         />
         GitHub
-      </a>
+      </a> */}
 
       <div className="skills-container">
         {skills.map(skill => (
