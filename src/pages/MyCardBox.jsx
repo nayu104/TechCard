@@ -11,6 +11,7 @@ function MyCardBox() {
   const [user, setUser] = useState(null);
   const [friendCards, setFriendCards] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [deleteToast, setDeleteToast] = useState(false);
 
   // 認証状態を監視
   useEffect(() => {
@@ -60,6 +61,9 @@ function MyCardBox() {
       });
       // 即時反映のため再取得
       setFriendCards(prev => prev.filter(card => card.uid !== uidToDelete));
+      // 削除成功メッセージを表示
+      setDeleteToast(true);
+      setTimeout(() => setDeleteToast(false), 2000);
     } catch (err) {
       alert('削除に失敗しました: ' + err.message);
     }
@@ -122,6 +126,9 @@ function MyCardBox() {
           )}
         </div>
       </div>
+      {deleteToast && (
+        <div className="delete-toast">削除しました</div>
+      )}
     </div>
   );
 }
