@@ -93,7 +93,7 @@ const FriendAddPage = () => {
         {searchError && <p style={{color:'#ff6600'}}>{searchError}</p>}
         {searchResult && (
           <div style={{position:'relative', margin:'2rem 0'}}>
-            <BusinessCard {...searchResult} uid={uidInput} />
+            <BusinessCard {...searchResult} uid={uidInput} showQRCode={false} />
             <button
               onClick={handleAddFriend}
               disabled={adding}

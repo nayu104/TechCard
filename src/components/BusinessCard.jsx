@@ -2,7 +2,7 @@ import { skillIcons } from '../data/skillIcons';
 import QRCodeComponent from './QRCode';
 import './BusinessCard.css';
 
-function BusinessCard({name, github, skills, avatar, message, uid}) {
+function BusinessCard({name, github, skills, avatar, message, uid, showQRCode = true}) {
   // QRコードに含める名刺情報をJSON形式で作成
   const cardData = {
     name: name,
@@ -16,12 +16,14 @@ function BusinessCard({name, github, skills, avatar, message, uid}) {
 
   return (
     <div className="business-card">
-      {/* QRコードを右上に配置 */}
-      <div className="qr-code-top-right">
-        <QRCodeComponent value={qrValue} size={80} className="qr-code" />
-      </div>
+      {/* QRコードを右上に配置（showQRCodeがtrueの場合のみ表示） */}
+      {showQRCode && (
+        <div className="qr-code-top-right">
+          <QRCodeComponent value={qrValue} size={80} className="qr-code" />
+        </div>
+      )}
       
-      <div className="card-header">
+      <div className={`card-header ${!showQRCode ? 'no-qr-padding' : ''}`}>
         <img src={avatar} alt={name} className="avatar" />
         <h3 className="user-name">{name}</h3>
       </div>

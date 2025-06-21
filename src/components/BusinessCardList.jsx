@@ -6,7 +6,7 @@ function BusinessCardList({ cards, deleteFriend }) {
     <div className="business-card-list">
       {cards.map((card, index) => (
         <div key={index} style={{position:'relative'}}>
-          <BusinessCard {...card} />
+          <BusinessCard {...card} showQRCode={false} />
           {deleteFriend && card.uid && (
             <button
               style={{position:'absolute', top:8, right:8, zIndex:10, background:'#ff6600', color:'#fff', border:'none', borderRadius:4, padding:'0.3em 0.7em', cursor:'pointer'}}
