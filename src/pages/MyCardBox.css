@@ -1,6 +1,7 @@
 .my-card-box-container {
   display: flex;
   min-height: 100vh;
+  height: auto; /* 高さを自動に設定 */
   /* background-color: #f0f0f0; */
   box-sizing: border-box;
   color: #000000;
@@ -14,6 +15,9 @@
   box-shadow: 2px 0 6px rgba(0,0,0,0.2);
   height: 100vh;
   box-sizing: border-box;
+  position: sticky; /* サイドバーを固定 */
+  top: 0;
+  flex-shrink: 0; /* サイドバーの幅を固定 */
 }
 
 .main-area {
@@ -22,7 +26,8 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  /* overflow: hidden; 削除 */
+  overflow: visible; /* オーバーフローを表示 */
+  min-height: 0; /* 最小高さを0に設定 */
   /* background-color: #fafafa; */
 }
 
@@ -30,5 +35,5 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #dddddd;
+  color: #ffffff; /* 白に変更 */
 } 

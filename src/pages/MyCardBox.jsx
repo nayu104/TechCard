@@ -83,7 +83,7 @@ function MyCardBox() {
       </div>
       {/* メインエリア */}
       <div className="main-area">
-        <h1 className="page-title">名刺入れ</h1>
+        <h1 className="page-title" style={{color:'#ffffff'}}>名刺入れ</h1>
         <div className="input-group">
           <input
             type="text"
@@ -99,7 +99,14 @@ function MyCardBox() {
           </div>
         )}
         {/* 名刺リスト or メッセージ */}
-        <div style={{flex: 1, overflowY: 'auto', minHeight: 0}}>
+        <div style={{
+          flex: 1, 
+          height: 'auto', 
+          overflow: 'visible',
+          minHeight: 0,
+          display: 'flex',
+          flexDirection: 'column'
+        }}>
           {loading ? (
             <div style={{ textAlign: 'center', color: '#888', marginTop: '2rem' }}>読み込み中...</div>
           ) : filteredCards.length > 0 ? (

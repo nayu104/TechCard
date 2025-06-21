@@ -78,7 +78,7 @@ const FriendAddPage = () => {
         <SidebarList />
       </div>
       <div className="main-area" style={{color:'#fff', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-start'}}>
-        <h2 className="page-title">IDで名刺の検索・追加</h2> 
+        <h2 className="page-title" style={{color:'#ffffff'}}>IDで名刺の検索・追加</h2> 
         {/* //6/21 ここを友達から名刺に変更 */}
         <form onSubmit={handleSearch} className="input-group">
           <input

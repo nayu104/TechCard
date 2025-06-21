@@ -6,6 +6,7 @@
   width: 100%;
   box-sizing: border-box;
   justify-items: center;
-  max-height: 100%; /* 親要素の高さに合わせる */
-  overflow-y: auto; /* 縦スクロール可能に */
+  height: fit-content; /* コンテンツに合わせて高さを調整 */
+  max-height: none; /* 最大高さ制限を解除 */
+  overflow: visible; /* オーバーフローを表示 */
 } 
