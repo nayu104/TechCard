@@ -37,7 +37,10 @@ function MyCardBox() {
         const friendDocs = await Promise.all(
           friendIds.map(fid => getDoc(doc(db, 'users', fid)))
         );
-        const cards = friendDocs.filter(snap => snap.exists()).map(snap => snap.data());
+        const cards = friendDocs.filter(snap => snap.exists()).map(snap => ({
+          ...snap.data(),
+          uid: snap.id
+        }));
         setFriendCards(cards);
       } catch (err) {
         setFriendCards([]);

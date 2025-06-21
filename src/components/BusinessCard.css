@@ -6,6 +6,7 @@
   height: 280px;
   width: 600px;
   box-sizing: border-box;
+  position: relative;
 }
 
 @media (max-width: 700px) {
@@ -16,10 +17,27 @@
   }
 }
 
+/* QRコードを右上に配置 */
+.qr-code-top-right {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 6px;
+  padding: 0.3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.qr-code {
+  display: block;
+}
+
 .card-header {
   display: flex;
   gap: 1rem;
   align-items: center;
+  padding-right: 90px; /* QRコードのスペースを確保 */
 }
 
 .avatar {

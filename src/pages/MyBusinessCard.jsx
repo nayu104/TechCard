@@ -120,6 +120,7 @@ function MyBusinessCard() {
                 skills={form.skills}
                 avatar={form.avatar}
                 message={form.message}
+                uid={user?.uid}
               />
             )}
           </section>
