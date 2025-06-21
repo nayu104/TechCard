@@ -87,7 +87,8 @@ function MyCardBox() {
       </div>
       {/* メインエリア */}
       <div className="main-area">
-        <h1 className="page-title" style={{color:'#ffffff'}}>名刺入れ</h1>
+        <h1 className="page-title">名刺入れ</h1>
+        
         <div className="input-group">
           <input
             type="text"
@@ -96,21 +97,16 @@ function MyCardBox() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
+        
         {/* 検索結果の表示 */}
         {searchTerm && (
-          <div style={{ marginBottom: '1rem', textAlign: 'center', color: '#666' }}>
+          <div className="search-results">
             「{searchTerm}」の検索結果: {filteredCards.length}件
           </div>
         )}
-        {/* 名刺リスト or メッセージ */}
-        <div style={{
-          flex: 1, 
-          height: 'auto', 
-          overflow: 'visible',
-          minHeight: 0,
-          display: 'flex',
-          flexDirection: 'column'
-        }}>
+        
+        {/* 名刺リストコンテナ */}
+        <div className="cards-container">
           {loading ? (
             <div style={{ textAlign: 'center', color: '#888', marginTop: '2rem' }}>読み込み中...</div>
           ) : filteredCards.length > 0 ? (
@@ -126,6 +122,7 @@ function MyCardBox() {
           )}
         </div>
       </div>
+      
       {deleteToast && (
         <div className="delete-toast">削除しました</div>
       )}

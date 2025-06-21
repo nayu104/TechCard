@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './ProfileEditModal.css';
 
+import defaultAvatar from '../assets/kkrn_icon_user_11.png';
+
 const SKILL_OPTIONS = [
   'JavaScript', 'TypeScript', 'React', 'Vue.js', 'Angular', 'Next.js', 'Nuxt.js',
   'Node.js', 'Express', 'NestJS', 'Python', 'Django', 'Flask', 'FastAPI',
@@ -50,7 +52,7 @@ const ProfileEditModal = ({ isOpen, onClose, onSave, form, setForm }) => {
           <div className="profile-edit-avatar">
             <label htmlFor="avatar-upload" className="avatar-label">
               <img
-                src={form.avatar || 'https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png'}
+                src={form.avatar || defaultAvatar}
                 alt="avatar"
                 className="avatar-img"
               />
