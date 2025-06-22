@@ -9,16 +9,14 @@ TechCardは、技術者向けの電子名刺アプリケーションです。Fir
 ### <img src="src/assets/Icon.png" width="20" height="20" /> 認証機能
 - メールアドレス・パスワードによるログイン
 - 新規ユーザー登録
-- セキュアな認証システム
 
 ### <img src="src/assets/Icon.png" width="20" height="20" /> 名刺管理
 - **My名刺**: 自分の名刺を作成・編集
 - **名刺入れ**: 友達の名刺を管理・表示
-- **QRコード**: 名刺情報をQRコードで共有
+- **QRコード**: 名刺情報をQRコードで共有 (未実装)
 
 ### <img src="src/assets/Icon.png" width="20" height="20" /> 検索機能
 - 名前・スキルによる名刺検索
-- リアルタイム検索結果表示
 
 ### <img src="src/assets/Icon.png" width="20" height="20" /> 友達機能
 - 友達の名刺を追加
@@ -28,21 +26,17 @@ TechCardは、技術者向けの電子名刺アプリケーションです。Fir
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 技術スタック
 
 ### フロントエンド
-- **React 18** - UIライブラリ
+- **React** - UIライブラリ
 - **Vite** - ビルドツール
-- **React Router** - ルーティング
-- **CSS3** - スタイリング
 
 ### バックエンド・データベース
 - **Firebase Authentication** - ユーザー認証
 - **Firestore** - NoSQLデータベース
 
-
 4. **開発サーバーを起動**
 ```bash
 npm run dev
 ```
-
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> プロジェクト構造
 
