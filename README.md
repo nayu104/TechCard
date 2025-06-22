@@ -16,8 +16,7 @@ https://electronic-business-card.vercel.app
 
 ---
 
-## <img src="src/assets/Icon.png" width="20" height="20" /> 主な機能
- フレンド追加テスト用ユーザーID
+## <img src="src/assets/Icon.png" width="20" height="20" /> フレンド追加テスト用ユーザーID
 
 | ユーザー名 | ID |
 |------------|-----|
