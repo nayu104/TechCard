@@ -1,4 +1,4 @@
-# TechCard - 技術名刺
+# TechCard -  技育ハッカソン 2025年6月_Vol.5
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 概要
 
