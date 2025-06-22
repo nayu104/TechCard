@@ -87,7 +87,7 @@ function MyCardBox() {
       </div>
       {/* メインエリア */}
       <div className="main-area">
-        <h1 className="page-title">名刺入れ</h1>
+        <h1 className="page-title">名刺リスト</h1>
         
         <div className="input-group">
           <input
