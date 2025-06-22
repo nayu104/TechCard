@@ -97,10 +97,10 @@ TechCard/
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 開発者
 
-- **nayu104** - 
-- **makoto0518** - 
-- **thisismine-kai** - 
-- **ichiki78** - 
+- **nayu104** 
+- **makoto0518**  
+- **thisismine-kai**  
+- **ichiki78** 
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> リンク
 
