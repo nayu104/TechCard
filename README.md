@@ -84,21 +84,13 @@ TechCard/
 - 検索機能
 - 名刺削除機能
 
-## <img src="src/assets/Icon.png" width="20" height="20" /> セキュリティ
 
-- Firebase Authenticationによる安全な認証
-- Firestoreセキュリティルール
-- 入力値バリデーション
-- XSS対策
-
-
-
-
+## <img src="src/assets/Icon.png" width="20" height="20" /> ライセンス
 このプロジェクトはMITライセンスの下で公開されています。
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 開発者
 
-- **https://github.com/nayu104** 
-- **https://github.com/makoto0518**  
-- **https://github.com/thisismine-kai**  
-- **https://github.com/ichiki78**
+- **nayu104 : https://github.com/nayu104** 
+- **makoto0518 : https://github.com/makoto0518**  
+- **thisismine-kai : https://github.com/thisismine-kai**  
+- **ichiki78 : https://github.com/ichiki78**
