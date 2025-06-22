@@ -1,24 +1,23 @@
-# TechCard - 電子名刺アプリケーション
+# TechCard -  技育ハッカソン 2025年6月_Vol.5 発表
 
-## 📱 概要
+## <img src="src/assets/Icon.png" width="20" height="20" /> 概要
 
 TechCardは、技術者向けの電子名刺アプリケーションです。Firebaseを使用したリアルタイムデータベースで、ユーザーは自分の名刺を作成・管理し、他のユーザーと名刺を交換できます。
+ <p>デモサイト : https://electronic-business-card.vercel.app</p>
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 主な機能
 
 ### <img src="src/assets/Icon.png" width="20" height="20" /> 認証機能
 - メールアドレス・パスワードによるログイン
 - 新規ユーザー登録
-- セキュアな認証システム
 
 ### <img src="src/assets/Icon.png" width="20" height="20" /> 名刺管理
-- **My名刺**: 自分の名刺を作成・編集
-- **名刺入れ**: 友達の名刺を管理・表示
-- **QRコード**: 名刺情報をQRコードで共有
+- **My名刺** : 自分の名刺を作成・編集
+- **名刺入れ** : 友達の名刺を管理・表示
+- **QRコード** : 名刺情報をQRコードで共有 (未実装)
 
 ### <img src="src/assets/Icon.png" width="20" height="20" /> 検索機能
 - 名前・スキルによる名刺検索
-- リアルタイム検索結果表示
 
 ### <img src="src/assets/Icon.png" width="20" height="20" /> 友達機能
 - 友達の名刺を追加
@@ -28,21 +27,17 @@ TechCardは、技術者向けの電子名刺アプリケーションです。Fir
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 技術スタック
 
 ### フロントエンド
-- **React 18** - UIライブラリ
+- **React** - UIライブラリ
 - **Vite** - ビルドツール
-- **React Router** - ルーティング
-- **CSS3** - スタイリング
 
 ### バックエンド・データベース
 - **Firebase Authentication** - ユーザー認証
 - **Firestore** - NoSQLデータベース
 
-
 4. **開発サーバーを起動**
 ```bash
 npm run dev
 ```
-
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> プロジェクト構造
 
@@ -67,7 +62,7 @@ TechCard/
 ```
 
 
-## 📱 主要ページ
+## <img src="src/assets/Icon.png" width="20" height="20" /> 主要ページ
 
 ### 1. ログインページ (`/login`)
 - メールアドレス・パスワード認証
@@ -89,25 +84,13 @@ TechCard/
 - 検索機能
 - 名刺削除機能
 
-## <img src="src/assets/Icon.png" width="20" height="20" /> セキュリティ
 
-- Firebase Authenticationによる安全な認証
-- Firestoreセキュリティルール
-- 入力値バリデーション
-- XSS対策
-
-
-
-
+## <img src="src/assets/Icon.png" width="20" height="20" /> ライセンス
 このプロジェクトはMITライセンスの下で公開されています。
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 開発者
 
-- **nayu104** - 
-- **makoto0518** - 
-- **thisismine-kai** - 
-- **ichiki78** - 
-
-## <img src="src/assets/Icon.png" width="20" height="20" /> リンク
-
-- **デモサイト**: [electronic-business-card.vercel.app](https://electronic-business-card.vercel.app)
+- **nayu104 : https://github.com/nayu104** 
+- **makoto0518 : https://github.com/makoto0518** 発表者
+- **thisismine-kai : https://github.com/thisismine-kai**  
+- **ichiki78 : https://github.com/ichiki78**
