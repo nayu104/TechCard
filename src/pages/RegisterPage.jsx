@@ -85,16 +85,13 @@ const RegisterPage = () => {
       <div className="login-container">
         <h2>アカウントを作成</h2>
         <form onSubmit={handleRegister}>
-          <div className="input-with-icon">
-            <CiUser className="input-icon" />
             <input 
               type="text" 
               placeholder="名前" 
               value={name} 
               onChange={(e) => setName(e.target.value)} 
               required
-            />
-          </div><br/>
+            /><br/>
           <div className="input-with-icon02">
             <CiMail className="input-icon" />
             <input
