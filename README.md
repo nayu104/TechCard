@@ -9,9 +9,6 @@ https://docs.google.com/presentation/d/1K3HNJBwZX9qrG3NwX3loN813-R7b0ysidmESG62Z
 
 ---
 
-https://youtu.be/d6Jtv9RmjNk
-
-
 ## <img src="src/assets/Icon.png" width="20" height="20" /> デモサイト
 
 https://electronic-business-card.vercel.app
