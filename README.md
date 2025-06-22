@@ -92,5 +92,5 @@ TechCard/
 
 - **nayu104 : https://github.com/nayu104** 
 - **makoto0518 : https://github.com/makoto0518** 発表者
-- **thisismine-kai : https://github.com/thisismine-kai**  
+- **thisismine-kai : https://github.com/thisismine-kai** 
 - **ichiki78 : https://github.com/ichiki78**
