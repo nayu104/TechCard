@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import icon from '../assets/Icon.png';
 import { MdEmail } from 'react-icons/md';
+import { CiMail } from "react-icons/ci";
+import { CiLock } from "react-icons/ci";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -68,22 +70,28 @@ const LoginPage = () => {
           login-form
         </h2> */}
         <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="e-mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          /><br/>
-          <input
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          /><br />
+          <div className="input-with-icon02">
+            <CiMail className="input-icon" />
+            <input
+              type="email"
+              placeholder="メールアドレス"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div><br/>
+          <div className="input-with-icon02">
+            <CiLock className="input-icon" />
+            <input
+              type="password"
+              placeholder="パスワード"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div><br />
           <div className="button-container">
-            <button type="submit">Login</button>
+            <button type="submit">ログイン</button>
           </div>
         </form>
 
