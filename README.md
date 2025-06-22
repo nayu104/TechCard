@@ -9,6 +9,11 @@ https://electronic-business-card.vercel.app
 
 ---
 
+## <img src="src/assets/Icon.png" width="20" height="20" /> ハッカソン用発表スライド
+https://docs.google.com/presentation/d/1K3HNJBwZX9qrG3NwX3loN813-R7b0ysidmESG62Zw5Y/edit?slide=id.g3676f3e521a_0_10#slide=id.g3676f3e521a_0_10
+
+---
+
 ## <img src="src/assets/Icon.png" width="20" height="20" /> テスト用：アカウント
 
 - **メールアドレス**: `aaaaaaaa@aaa.com`  
