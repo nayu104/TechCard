@@ -1,4 +1,4 @@
-# TechCard - 電子名刺アプリケーション
+# <img src="src/assets/Icon.png" width="20" height="20" /> TechCard - 電子名刺アプリケーション
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 概要
 
