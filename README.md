@@ -3,14 +3,28 @@
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 概要
 
 TechCardは、技術者向けの電子名刺アプリケーションです。Firebaseを使用したリアルタイムデータベースで、ユーザーは自分の名刺を作成・管理し、他のユーザーと名刺を交換できます。
- <p>デモサイト : https://electronic-business-card.vercel.app</p>
- テスト用：
- mail : aaaaaaaa@aaa.com
- pw : 123456
- フレンド追加テスト用ID：
- kai     : sSKgWTJuwccevq3WCGKgfzpTl3A3
- 初期ユーザー : 5dgNSAV6DkdLq5yJydYZyxEc6mu1
- hamu104     : 3YOfKatkAnYFBWa9963pNk8Jp9W2
+## <img src="src/assets/Icon.png" width="20" height="20" /> デモサイト
+
+<img src="src/assets/Icon.png" width="20" height="20" /> [https://electronic-business-card.vercel.app](https://electronic-business-card.vercel.app)
+
+---
+
+## <img src="src/assets/Icon.png" width="20" height="20" /> テスト用アカウント
+
+- **メールアドレス**: `aaaaaaaa@aaa.com`  
+- **パスワード**: `123456`
+
+---
+
+## <img src="src/assets/Icon.png" width="20" height="20" /> 主な機能
+ フレンド追加テスト用ユーザーID
+
+| ユーザー名 | ID |
+|------------|-----|
+| kai        | `sSKgWTJuwccevq3WCGKgfzpTl3A3` |
+| 初期ユーザー | `5dgNSAV6DkdLq5yJydYZyxEc6mu1` |
+| hamu104    | `3YOfKatkAnYFBWa9963pNk8Jp9W2` |
+
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 主な機能
 
