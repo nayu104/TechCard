@@ -74,6 +74,52 @@ body {
     color: #bbbbbb;
 }
 
+/* アイコン付き入力フィールドのスタイル */
+.input-with-icon {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    color: #bbbbbb;
+    font-size: 1.2rem;
+    z-index: 1;
+    top: 12px;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding-left: 40px; /* アイコンの分だけ左パディングを増やす */
+    box-sizing: border-box;
+}
+
+.input-with-icon input::placeholder {
+    color: #bbbbbb;
+    text-indent: 25px; /* プレースホルダーを右に10px移動 */
+}
+
+.input-with-icon02 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon02 input {
+    width: 100%;
+    padding-left: 40px; /* アイコンの分だけ左パディングを増やす */
+    box-sizing: border-box;
+}
+
+.input-with-icon02 input::placeholder {
+  color: #bbbbbb;
+  text-indent: 5px; /* プレースホルダーを右に10px移動 */
+}
+
 .login-container button {
     width: 70%;
     padding: 0.75rem;
