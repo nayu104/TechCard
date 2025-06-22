@@ -34,7 +34,7 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #ffffff; /* 白に変更 */
+  color: #ffffff !important; /* 白に変更し、!importantで強制適用 */
   flex-shrink: 0; /* タイトルを固定 */
 }
 
