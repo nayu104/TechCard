@@ -67,7 +67,7 @@ TechCard/
 ```
 
 
-## 📱 主要ページ
+## <img src="src/assets/Icon.png" width="20" height="20" /> 主要ページ
 
 ### 1. ログインページ (`/login`)
 - メールアドレス・パスワード認証
