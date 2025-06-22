@@ -1,69 +1,113 @@
-###  実行コマンド：npm run dev
+# TechCard - 電子名刺アプリケーション
 
-###  ★GitHubコマンド一覧
+## 📱 概要
 
-##  ① 初期設定・初期化
+TechCardは、技術者向けの電子名刺アプリケーションです。Firebaseを使用したリアルタイムデータベースで、ユーザーは自分の名刺を作成・管理し、他のユーザーと名刺を交換できます。
 
-| コマンド                                   | 説明                |
-| -------------------------------------- | ----------------- |
-| `git init`                             | ローカルリポジトリを初期化     |
-| `git clone <URL>`                      | リモートリポジトリをコピーして取得 |
-| `git config --global user.name "名前"`   | ユーザー名の設定          |
-| `git config --global user.email "メール"` | メールアドレスの設定        |
+## <img src="src/assets/Icon.png" width="20" height="20" /> 主な機能
 
----
+### <img src="src/assets/Icon.png" width="20" height="20" /> 認証機能
+- メールアドレス・パスワードによるログイン
+- 新規ユーザー登録
+- セキュアな認証システム
 
-##  ② ステージング・コミット
+### <img src="src/assets/Icon.png" width="20" height="20" /> 名刺管理
+- **My名刺**: 自分の名刺を作成・編集
+- **名刺入れ**: 友達の名刺を管理・表示
+- **QRコード**: 名刺情報をQRコードで共有
 
-| コマンド                    | 説明                    |
-| ----------------------- | --------------------- |
-| `git status`            | 現在の状態を確認（変更、ステージ状態など） |
-| `git add .`             | すべての変更をステージングに追加      |
-| `git add <ファイル名>`       | 特定のファイルだけ追加           |
-| `git commit -m "メッセージ"` | ステージされた変更を記録（コミット）    |
+### <img src="src/assets/Icon.png" width="20" height="20" /> 検索機能
+- 名前・スキルによる名刺検索
+- リアルタイム検索結果表示
 
----
+### <img src="src/assets/Icon.png" width="20" height="20" /> 友達機能
+- 友達の名刺を追加
+- 名刺の削除機能
+- 友達リスト管理
 
-##  ③ ブランチ操作
+## <img src="src/assets/Icon.png" width="20" height="20" /> 技術スタック
 
-| コマンド                   | 説明               |
-| ---------------------- | ---------------- |
-| `git branch`           | ブランチ一覧を表示        |
-| `git branch <名前>`      | 新しいブランチを作成       |
-| `git checkout <名前>`    | 指定ブランチに切り替え      |
-| `git checkout -b <名前>` | 作成＋切り替えを同時に実行    |
-| `git merge <ブランチ>`     | 他ブランチを現在のブランチに統合 |
+### フロントエンド
+- **React 18** - UIライブラリ
+- **Vite** - ビルドツール
+- **React Router** - ルーティング
+- **CSS3** - スタイリング
 
----
+### バックエンド・データベース
+- **Firebase Authentication** - ユーザー認証
+- **Firestore** - NoSQLデータベース
 
-##  ④ リモート連携
 
-| コマンド                     | 説明                |
-| ------------------------ | ----------------- |
-| `git remote -v`          | リモートのURL確認        |
-| `git push origin <ブランチ>` | リモートに変更を送信（プッシュ）  |
-| `git pull origin <ブランチ>` | リモートの変更を取得して統合    |
-| `git fetch`              | リモートの変更を取得（マージなし） |
+4. **開発サーバーを起動**
+```bash
+npm run dev
+```
 
----
 
-##  ⑤ 巻き戻し・確認
+## <img src="src/assets/Icon.png" width="20" height="20" /> プロジェクト構造
 
-| コマンド                     | 説明                 |
-| ------------------------ | ------------------ |
-| `git log`                | コミット履歴を表示          |
-| `git diff`               | 変更内容の差分を表示         |
-| `git reset <ファイル>`       | ステージ解除             |
-| `git checkout -- <ファイル>` | 変更を元に戻す            |
-| `git revert <コミットID>`    | そのコミットを打ち消すコミットを作る |
+```
+TechCard/
+├── src/
+│   ├── components/          # 再利用可能なコンポーネント
+│   │   ├── BusinessCard.jsx     # 名刺表示コンポーネント
+│   │   ├── BusinessCardList.jsx # 名刺リストコンポーネント
+│   │   ├── QRCode.jsx           # QRコード生成コンポーネント
+│   │   └── SideBarList.jsx      # サイドバーナビゲーション
+│   ├── pages/              # ページコンポーネント
+│   │   ├── LoginPage.jsx        # ログインページ
+│   │   ├── RegisterPage.jsx     # 登録ページ
+│   │   ├── MyBusinessCard.jsx   # 自分の名刺ページ
+│   │   └── MyCardBox.jsx        # 名刺入れページ
+│   ├── data/               # データファイル
+│   ├── assets/             # 画像・アイコン
+│   └── firebase.js         # Firebase設定
+├── public/                 # 静的ファイル
+└── package.json           # 依存関係
+```
 
----
 
-##  ⑥ GitHub関連でよく使う補足
+## 📱 主要ページ
 
-| コマンド                           | 説明                       |
-| ------------------------------ | ------------------------ |
-| `git push -u origin main`      | 初回の `push` に必要（`-u` で追跡） |
-| `git pull`                     | 最新状態に更新（`fetch`＋`merge`） |
-| `git clone git@github.com:...` | SSHクローン（事前に鍵登録が必要）       |
+### 1. ログインページ (`/login`)
+- メールアドレス・パスワード認証
+- 新規登録へのリンク
+- アニメーション付きロゴ
 
+### 2. 登録ページ (`/register`)
+- 新規ユーザー登録
+- 名前・メール・パスワード入力
+- バリデーション機能
+
+### 3. My名刺 (`/mybusinesscard`)
+- 自分の名刺表示・編集
+- QRコード生成
+- プロフィール情報管理
+
+### 4. 名刺入れ (`/mycardbox`)
+- 友達の名刺一覧表示
+- 検索機能
+- 名刺削除機能
+
+## <img src="src/assets/Icon.png" width="20" height="20" /> セキュリティ
+
+- Firebase Authenticationによる安全な認証
+- Firestoreセキュリティルール
+- 入力値バリデーション
+- XSS対策
+
+
+
+
+このプロジェクトはMITライセンスの下で公開されています。
+
+## <img src="src/assets/Icon.png" width="20" height="20" /> 開発者
+
+- **nayu104** - 
+- **makoto0518** - 
+- **thisismine-kai** - 
+- **ichiki78** - 
+
+## <img src="src/assets/Icon.png" width="20" height="20" /> リンク
+
+- **デモサイト**: [electronic-business-card.vercel.app](https://electronic-business-card.vercel.app)
