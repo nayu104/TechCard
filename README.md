@@ -99,6 +99,6 @@ TechCard/
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 開発者
 
 - **nayu104** 
-- **makoto0518**  
-- **thisismine-kai**  
-- **ichiki78** 
+- **github.com/makoto0518**  
+- **github.com/thisismine-kai**  
+- **github.com/ichiki78**
