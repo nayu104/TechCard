@@ -3,14 +3,15 @@
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 概要
 
 TechCardは、技術者向けの電子名刺アプリケーションです。Firebaseを使用したリアルタイムデータベースで、ユーザーは自分の名刺を作成・管理し、他のユーザーと名刺を交換できます。
-## <img src="src/assets/Icon.png" width="20" height="20" /> デモサイト
-
-https://electronic-business-card.vercel.app
-
----
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> ハッカソン用発表スライド
 https://docs.google.com/presentation/d/1K3HNJBwZX9qrG3NwX3loN813-R7b0ysidmESG62Zw5Y/edit?slide=id.g3676f3e521a_0_10#slide=id.g3676f3e521a_0_10
+
+---
+
+## <img src="src/assets/Icon.png" width="20" height="20" /> デモサイト
+
+https://electronic-business-card.vercel.app
 
 ---
 
