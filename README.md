@@ -53,12 +53,11 @@ https://electronic-business-card.vercel.app
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 技術スタック
 
 ### フロントエンド
-- **React** - UIライブラリ
-- **Vite** - ビルドツール
+- **React** - 
 
 ### バックエンド・データベース
-- **Firebase Authentication** - ユーザー認証
-- **Firestore** - NoSQLデータベース
+- **Firebase Authentication** 
+- **Firestore** 
 
 4. **開発サーバーを起動**
 ```bash
@@ -110,9 +109,8 @@ TechCard/
 - 検索機能
 - 名刺削除機能
 
-
-## <img src="src/assets/Icon.png" width="20" height="20" /> ライセンス
-このプロジェクトはMITライセンスの下で公開されています。
+## <img src="src/assets/Icon.png" width="20" height="20" /> ライセンス  
+このプロジェクトは [MITライセンス](https://opensource.org/licenses/MIT) の下で公開されています。
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 開発者
 
