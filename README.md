@@ -110,7 +110,7 @@ TechCard/
 - 名刺削除機能
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> ライセンス  
-このプロジェクトは [MITライセンス](https://opensource.org/licenses/MIT) の下で公開されています。
+このプロジェクトはMITライセンスの下で公開されています。
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 開発者
 
