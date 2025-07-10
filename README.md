@@ -53,7 +53,7 @@ https://electronic-business-card.vercel.app
 ## <img src="src/assets/Icon.png" width="20" height="20" /> 技術スタック
 
 ### フロントエンド
-- **React** - 
+- **React** 
 
 ### バックエンド・データベース
 - **Firebase Authentication** 
