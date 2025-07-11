@@ -17,7 +17,7 @@ https://electronic-business-card.vercel.app
 
 ## <img src="src/assets/Icon.png" width="20" height="20" /> テスト用：アカウント
 
-- **メールアドレス**: `aaaaaaaa@aaa.com`  
+- **メールアドレス**: `aaaaaaaa@aaa.com`  （aは8つ＠aaa.com)
 - **パスワード**: `123456`
 
 ---
